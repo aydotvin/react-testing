@@ -1,0 +1,19 @@
+Jest:
+{
+	-	This helps in running the test and providing proper messages accordingly.
+	-	This provides methods such as test and expect globally to use with RTL methods.
+}
+
+RTL:
+{
+	-	This provides methods such as render, screen, etc. which helps in actual testing.
+	-	
+}
+
+TDD:
+{
+	Step 1: Write down the requirement in the test file.
+	Step 2: Write the test which fails initially.
+	Step 3: Write the software code to pass the test.
+	Step 4: Refractor the code while ensuring tests pass.
+}
