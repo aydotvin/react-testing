@@ -2,6 +2,12 @@ Jest:
 {
 	-	This helps in running the test and providing proper messages accordingly.
 	-	This provides methods such as test and expect globally to use with RTL methods.
+
+	-	test method:
+	{
+		-	test.only() to run only that test in a test file with multiple tests.
+		-	test.skip() to skip that test in the test file with multiple tests.
+	}
 }
 
 RTL:
