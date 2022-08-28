@@ -7,6 +7,22 @@ Jest:
 	{
 		-	test.only() to run only that test in a test file with multiple tests.
 		-	test.skip() to skip that test in the test file with multiple tests.
+		-	"it" can be used as alternate for "test"
+		-	"fit" for test.only and "xit" for test.skip
+	}
+
+	-	describe method:
+	{
+		-	This is used to group the tests together.
+		-	This supports .only and .skip and behaviour remains same as above.
+		-	Possible to nest describe blocks.
+	}
+
+	-	Naming conventions:
+	{
+		-	.test.js, .test.tsx
+		-	.spec.js, .spec.tsx
+		-	.js, .tsx in __tests__ folder
 	}
 }
 
@@ -22,4 +38,14 @@ TDD:
 	Step 2: Write the test which fails initially.
 	Step 3: Write the software code to pass the test.
 	Step 4: Refractor the code while ensuring tests pass.
+}
+
+Naming conventions:
+{
+	-	Jest a
+}
+
+Note:
+{
+	-	"Test Suite" is one test file.
 }
