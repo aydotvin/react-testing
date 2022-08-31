@@ -55,7 +55,39 @@ Jest:
 RTL:
 {
 	-	This provides methods such as render, screen, etc. which helps in actual testing.
-	-	
+
+	-	getByRole:
+	{
+		-	Selects the element based on its default/defined role attribute.
+		-	options:
+		{
+			-	name:
+			{
+				-	Selects the text content of the label element, text content of a button, or value of aria-label attribute. This is case sensitive.
+				-	This is used when multiple elements are found for given role.
+			}
+
+			-	level:
+			{
+				-	This is specific to the heading element. 1-6.
+			}
+		}
+	}
+
+	-	getByLabelText:
+	{
+		-	This searches for the label element with given text and finds its linked input element by checking the for and id matching attributes.
+		-	for in label and id in the input element should match.
+
+		-	options:
+		{
+			-	selector: this takes in the input element tag name and matches that with the element returned by the label name selector.
+		}
+	}
+
+	-	getByPlaceholderText: searches all elements with placeholder attribute and finds one that matches given text.
+
+	-	getByText: searches all elements that have text node with textContent matching given text.
 }
 
 TDD:
