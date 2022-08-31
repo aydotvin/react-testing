@@ -90,6 +90,8 @@ RTL:
 	-	getByText: searches all elements that have text node with textContent matching given text.
 
 	-	getByDisplayValue: returns input, select or textarea that has matching value.
+
+	-	getByAltText: returns element that has the given alt text. Only works on elements that accepts alt attribute such as img, input, area, custom html elements.
 }
 
 TDD:
