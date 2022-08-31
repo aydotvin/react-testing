@@ -24,6 +24,32 @@ Jest:
 		-	.spec.js, .spec.tsx
 		-	.js, .tsx in __tests__ folder
 	}
+	
+	-	Coverage:
+	{
+		-	Used to get the stats of the tests runs.
+		-	Create a new script that runs test script with --coverage flag and --watchAll flag to watch all the files and not just the changed files.
+		-	collectCoverageFrom:
+		{
+			-	This flag specifies the folders to look for to find the test files.
+			-	This can also be used to exclude certain files based on their naming types.
+			-	Example:
+			{
+				-	To specify the folder to consider: --collectCoverageFrom='src/components/**/*.{ts,tsx,js,jsx}' - includes files only from the components folder.
+				-	To exclude the files based on their naming conventions: --collectCoverageFrom='!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx,js,jsx}'
+			}
+		}
+
+		-	Threshold: this can be defined in the package.json to set the passing coverage limits for jest.
+
+		-	The coverage can also be seen in html format by opening the index.html file that is inside the "coverage" folder that gets generated.
+	}
+
+	-	Assertions:
+	{
+		-	This is done using the expect method of jest.
+		-	Jest only provides js matchers. To assert DOM actions, need to use jest-dom package.
+	}
 }
 
 RTL:
@@ -40,9 +66,19 @@ TDD:
 	Step 4: Refractor the code while ensuring tests pass.
 }
 
-Naming conventions:
+What to test:
 {
-	-	Jest a
+	-	Test that the component renders and expected initial text is there is the document.
+	-	Test that the component renders with the passed props.
+	-	Test different states of a component.
+	-	Test that the components responds correctly to the user events.
+}
+
+What not to test:
+{
+	-	Implementation details - test the behaviour of the user and not the developer.
+	-	3rd party code.
+	-	Direct testing of utility functions - test the output of the utility functions linked to the user actions.
 }
 
 Note:
