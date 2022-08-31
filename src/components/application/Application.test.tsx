@@ -39,6 +39,9 @@ describe("Application", () => {
 		const paragraphElement = screen.getByText("All fields are mandatory");
 		expect(paragraphElement).toBeInTheDocument();
 
+		const nameElement4 = screen.getByDisplayValue(/john/i);
+		expect(nameElement4).toBeInTheDocument();
+
 		const locationElement = screen.getByRole("combobox");
 		expect(locationElement).toBeInTheDocument();
 	});

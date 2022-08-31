@@ -88,6 +88,8 @@ RTL:
 	-	getByPlaceholderText: searches all elements with placeholder attribute and finds one that matches given text.
 
 	-	getByText: searches all elements that have text node with textContent matching given text.
+
+	-	getByDisplayValue: returns input, select or textarea that has matching value.
 }
 
 TDD:
