@@ -56,7 +56,7 @@ RTL:
 {
 	-	This provides methods such as render, screen, etc. which helps in actual testing.
 
-	-	getByRole:
+	-	getByRole: top priority.
 	{
 		-	Selects the element based on its default/defined role attribute.
 		-	options:
@@ -87,11 +87,15 @@ RTL:
 
 	-	getByPlaceholderText: searches all elements with placeholder attribute and finds one that matches given text.
 
-	-	getByText: searches all elements that have text node with textContent matching given text.
+	-	getByText: searches all elements that have text node with textContent matching given text. This is used for divs, spans and p tags.
 
 	-	getByDisplayValue: returns input, select or textarea that has matching value.
 
-	-	getByAltText: returns element that has the given alt text. Only works on elements that accepts alt attribute such as img, input, area, custom html elements.
+	-	getByAltText: returns the element that has the given alt text. Only works on elements that accepts alt attribute such as img, input, area, custom html elements.
+
+	-	getByTitle: returns the element that has the matching title attribute.
+
+	-	getByTestId: returns the element that has the matching data-testid attribute. Last resort option. Useful in dynamic text elements.
 }
 
 TDD:

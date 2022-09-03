@@ -45,6 +45,12 @@ describe("Application", () => {
 		const imageElement = screen.getByAltText("a person with a laptop");
 		expect(imageElement).toBeInTheDocument();
 
+		const closeElement = screen.getByTitle("close");
+		expect(closeElement).toBeInTheDocument();
+
+		const customElement = screen.getByTestId("custom-element");
+		expect(customElement).toBeInTheDocument();
+
 		const locationElement = screen.getByRole("combobox");
 		expect(locationElement).toBeInTheDocument();
 	});
