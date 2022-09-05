@@ -96,6 +96,14 @@ RTL:
 	-	getByTitle: returns the element that has the matching title attribute.
 
 	-	getByTestId: returns the element that has the matching data-testid attribute. Last resort option. Useful in dynamic text elements.
+
+	-	getAllByRole: returns an array of matching elements.
+
+	-	textMatch:
+	{
+		-	The first param passed to the above methods is called textMatch.
+		-	This could be a string, regex or a function that returns 
+	}
 }
 
 TDD:
