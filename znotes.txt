@@ -56,53 +56,62 @@ RTL:
 {
 	-	This provides methods such as render, screen, etc. which helps in actual testing.
 
-	-	getByRole: top priority.
+	-	getBy:
 	{
-		-	Selects the element based on its default/defined role attribute.
-		-	options:
+		-	getByRole: top priority.
 		{
-			-	name:
+			-	Selects the element based on its default/defined role attribute.
+			-	options:
 			{
-				-	Selects the text content of the label element, text content of a button, or value of aria-label attribute. This is case sensitive.
-				-	This is used when multiple elements are found for given role.
-			}
+				-	name:
+				{
+					-	Selects the text content of the label element, text content of a button, or value of aria-label attribute. This is case sensitive.
+					-	This is used when multiple elements are found for given role.
+				}
 
-			-	level:
-			{
-				-	This is specific to the heading element. 1-6.
+				-	level:
+				{
+					-	This is specific to the heading element. 1-6.
+				}
 			}
 		}
-	}
 
-	-	getByLabelText:
-	{
-		-	This searches for the label element with given text and finds its linked input element by checking the for and id matching attributes.
-		-	for in label and id in the input element should match.
-
-		-	options:
+		-	getByLabelText:
 		{
-			-	selector: this takes in the input element tag name and matches that with the element returned by the label name selector.
+			-	This searches for the label element with given text and finds its linked input element by checking the for and id matching attributes.
+			-	for in label and id in the input element should match.
+
+			-	options:
+			{
+				-	selector: this takes in the input element tag name and matches that with the element returned by the label name selector.
+			}
 		}
+
+		-	getByPlaceholderText: searches all elements with placeholder attribute and finds one that matches given text.
+
+		-	getByText: searches all elements that have text node with textContent matching given text. This is used for divs, spans and p tags.
+
+		-	getByDisplayValue: returns input, select or textarea that has matching value.
+
+		-	getByAltText: returns the element that has the given alt text. Only works on elements that accepts alt attribute such as img, input, area, custom html elements.
+
+		-	getByTitle: returns the element that has the matching title attribute.
+
+		-	getByTestId: returns the element that has the matching data-testid attribute. Last resort option. Useful in dynamic text elements.
+
+		-	getAllByRole: returns an array of matching elements.
+
+		-	textMatch:
+		{
+			-	The first param passed to the above methods is called textMatch.
+			-	This could be a string, regex or a function that returns 
+		}	
 	}
 
-	-	getByPlaceholderText: searches all elements with placeholder attribute and finds one that matches given text.
-
-	-	getByText: searches all elements that have text node with textContent matching given text. This is used for divs, spans and p tags.
-
-	-	getByDisplayValue: returns input, select or textarea that has matching value.
-
-	-	getByAltText: returns the element that has the given alt text. Only works on elements that accepts alt attribute such as img, input, area, custom html elements.
-
-	-	getByTitle: returns the element that has the matching title attribute.
-
-	-	getByTestId: returns the element that has the matching data-testid attribute. Last resort option. Useful in dynamic text elements.
-
-	-	getAllByRole: returns an array of matching elements.
-
-	-	textMatch:
+	-	queryBy:
 	{
-		-	The first param passed to the above methods is called textMatch.
-		-	This could be a string, regex or a function that returns 
+		-	This is useful when a element has to be checked to not be in the document.
+		-	These return element if found and null if not found.
 	}
 }
 
