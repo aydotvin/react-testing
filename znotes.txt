@@ -56,7 +56,7 @@ RTL:
 {
 	-	This provides methods such as render, screen, etc. which helps in actual testing.
 
-	-	getBy:
+	-	getBy: If elements are present in the DOM.
 	{
 		-	getByRole: top priority.
 		{
@@ -108,10 +108,16 @@ RTL:
 		}	
 	}
 
-	-	queryBy:
+	-	queryBy: If elements are not present in the DOM.
 	{
 		-	This is useful when a element has to be checked to not be in the document.
 		-	These return element if found and null if not found.
+	}
+
+	-	findBy:
+	{
+		-	Returns a promise which resolves when an element is found which matches the query.
+		-	Promise is rejected if no element is found or finds more than 1 element after the passed timeout.
 	}
 }
 
