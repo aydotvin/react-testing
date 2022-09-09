@@ -119,6 +119,15 @@ RTL:
 		-	Returns a promise which resolves when an element is found which matches the query.
 		-	Promise is rejected if no element is found or finds more than 1 element after the passed timeout.
 	}
+
+	-	Note:
+	{
+		-	Do not use the querySelector method to access elements as the classes and selectors is not how a user navigates in a website.
+
+		-	screen.debug() is used to log the DOM structure at any point in the test process. This will show the DOM structure at any particular point in the flow.
+
+		-	logRoles(); this prints out all the implicit roles in the DOM tree.
+	}
 }
 
 TDD:
