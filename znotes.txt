@@ -127,6 +127,8 @@ RTL:
 		-	screen.debug() is used to log the DOM structure at any point in the test process. This will show the DOM structure at any particular point in the flow.
 
 		-	logRoles(); this prints out all the implicit roles in the DOM tree.
+
+		-	Chrome extension: this extension will make it easier to generate query methods to select elements in the DOM. https://chrome.google.com/webstore/detail/testing-playground/hejbmebodbijjdhflfknehhcgaklhano
 	}
 }
 
