@@ -120,6 +120,32 @@ RTL:
 		-	Promise is rejected if no element is found or finds more than 1 element after the passed timeout.
 	}
 
+	-	User interactions:
+	{
+		-	Import user event from testing-library/user-event
+		-	All user interaction events are async.
+		-	Before using user interactions in a test, user.setup() needs to be called.
+
+		-	Pointer interactions:
+		{
+			-	Convenience APIs:
+			{
+				-	https://testing-library.com/docs/user-event/convenience
+				-	Higher level of user events.
+				-	.click(), .dblClick(), .tripleClick()
+			}
+			-	Pointer APIs - https://testing-library.com/docs/user-event/pointer - APIs with more control of user event.
+		}
+
+		-	Keyboard interactions:
+		{
+			-	Convenience API: .tab()
+			-	Utility API: .type(), .clear(), .selectOptions(), .deselectOptions(), .upload()
+			-	Clipboard APIs: cut, copy, paste
+			-	Keyboard APIs: lower level APIs.
+		}
+	}
+
 	-	Note:
 	{
 		-	Do not use the querySelector method to access elements as the classes and selectors is not how a user navigates in a website.
