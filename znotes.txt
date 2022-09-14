@@ -146,6 +146,14 @@ RTL:
 		}
 	}
 
+	-	Testing provider wrappings:
+	{
+		-	When a component which comes under a wrapper is tested, the wrapper can be mentioned in the second argument of the render method.
+		-	In case of theme providers that wrap the entire application, a custom render method has to be created which has the provider already wrapping any react element passed to it.
+		-	Create a test-utils file in src and add the wrapping component in it and export the custom render as render.
+		-	https://testing-library.com/docs/react-testing-library/setup#custom-render 
+	}
+
 	-	Note:
 	{
 		-	Do not use the querySelector method to access elements as the classes and selectors is not how a user navigates in a website.

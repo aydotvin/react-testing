@@ -1,15 +1,18 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { Application } from "./components/application/Application";
 import { Counter } from "./components/counter/Counter";
+import { MuiMode } from "./components/mui/MuiMode";
+import { AppProviders } from "./components/providers/AppProviders";
 
 function App() {
 	return (
-		<div className="App">
-			<Application></Application>
-			<Counter></Counter>
-		</div>
+		<AppProviders>
+			<div className="App">
+				{/* <Application></Application> */}
+				{/* <Counter></Counter> */}
+				<MuiMode></MuiMode>
+			</div>
+		</AppProviders>
 	);
 }
 
